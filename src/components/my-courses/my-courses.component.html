@@ -1,0 +1,22 @@
+<div class="courses-container">
+    <mat-accordion>
+        @for(currentCourse of (myCourse$|async);track $index){
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title style="display: flex; justify-content: space-between; width: 100%;">
+                <span> Course Name: </span>{{currentCourse.title}}
+                <button mat-raised-button color="primary" class="any-button" (click)="deleteCurrentCourse(currentCourse.id)">Delete current course</button>
+            </mat-panel-title>
+            </mat-expansion-panel-header>
+            {{currentCourse.description}} 
+            <mat-list>
+                @for(currenLesson of currentCourse.lessons;track $index){
+               <mat-list-item>
+                    * {{currenLesson.title}} --- {{currenLesson.content}}
+                </mat-list-item>
+                }
+            </mat-list>
+        </mat-expansion-panel>
+        }
+    </mat-accordion>
+</div>

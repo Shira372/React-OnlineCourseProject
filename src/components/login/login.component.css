@@ -1,0 +1,21 @@
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* גובה מלא של המסך */
+  }
+  
+  mat-card {
+    width: 300px; /* רוחב קבוע */
+    text-align: center; /* מרכז את הטקסט */
+  }
+  
+  .center-title {
+    text-align: center; /* מרכז את הכותרת */
+  }
+  
+  .center-actions {
+    display: flex;
+    justify-content: center; /* מרכז את הכפתור */
+  }
+  
